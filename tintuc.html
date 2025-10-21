@@ -1,0 +1,237 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="home-web.css">
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="first">
+            <span class="hotline0">Hotline:</span> 09123456789 - 0982386712
+            <div class="info">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="gioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="tintuc.html">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="lienhe.html">Liên Hệ</a>
+                        </li>
+                        <li class="sign">
+                            <a href="">Tài Khoản</a>
+                            <ul>
+                                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                                <li><a href="dangky.html">Đăng ký</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="second">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="picture/hainam.png" alt="">
+                </a>
+
+            </div>
+            <div class="thumnail">Tự hào mang giá trị sử dụng đến với khách hàng</div>
+            <div class="search">
+                <label for="tim"><img src="picture/search-pic.jpg" alt="" class="icon-search"></label>
+                <input type="search" name="tim kiem" id="tim">
+                <br>
+                <img src="picture/email-pic.png" alt="" class="icon-mail"> xemayhainam@gmail.com
+                <br>
+                <img src="picture/location-pic.jpg" alt="" class="icon-address">
+                1 Xuân Thủy - Cầu Giấy - Hà Nội
+            </div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="xethethao.html">xe thể thao</a>
+                    </li>
+                    <li>
+                        <a href="xehonda.html">honda</a>
+                    </li>
+                    <li>
+                        <a href="xepiaggio.html">piaggio</a>
+                    </li>
+                    <li>
+                        <a href="xeyamaha.html">yamaha</a>
+                    </li>
+                    <li>
+                        <a href="xesym.html">sym</a>
+                    </li>
+                    <li>
+                        <a href="xesuzuki.html">suzuki</a>
+                    </li>
+                    <li>
+                        <a href="xethethao.html">xe giá rẻ</a>
+                    </li>
+                    <li>
+                        <a href="xe50cc.html">xe 50cc</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <script> //đoạn này để khi đăng nhập thành công sẽ hiển thị tên người dùng ở đầu trang, và nhấn đăng xuất sẽ thoát ra
+            let username = localStorage.getItem("username");
+            if (username) {
+                let taiKhoan = document.querySelector(".sign");
+                taiKhoan.innerHTML = `
+      <a href="#">${username}</a>
+      <ul>
+        <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+      </ul> `;
+                let nutDangXuat = document.getElementById("logoutBtn");
+                nutDangXuat.addEventListener("click", function () {
+                    localStorage.removeItem("username");
+                    location.reload();
+                });
+            }
+        </script>
+        <main style="width: 1200px; margin: 0 auto;">
+            <h1 style="color: rgb(42, 42, 78);">Chợ xe máy tại Hà Nội nào uy tín chất lượng ?</h1>
+            <h1 style="color: rgb(42, 42, 78);">Bạn cần mua hoặc bán xe máy cũ liên hệ hotline: 0982.386.712
+                (call/zalo/sms)
+                Em đang cần mua một con xe wave đi công trường nên muốn ra chợ xe máy cũ mua cho nhanh với rẻ nhưng
+                không biết
+                chợ xe máy cũ tại Hà Nội nào uy tín. Bác nào biết hay có kinh nghiệm gì thì chia sẻ cho em với. Cảm ơn
+                nhiều ạ -
+                Nickname Mỳ Bò</h1>
+
+            <div>
+                <h2 style="color: rgb(42, 42, 78);">1. Review web tinhte.vn</h2>
+                <p style="width: 700px;">Để biết chợ xe máy cũ tại Hà Nội nào uy tín thì trước hết bạn nên tham gia một
+                    số diễn
+                    đàn và tham khảo ý
+                    kiến. Dưới đây là ý kiến của một số nickname trên diễn đàn tinhte.vn:</p>
+                <img src="picture/tintuc/tintuc3.webp" alt="">
+                <br>
+                <img src="picture/tintuc/tintuc4.webp" alt="">
+            </div>
+            <div>
+                <h2 style="color: rgb(42, 42, 78);">2. Kinh nghiệm thực tế</h2>
+                <p style=" width: 700px;">
+                    Trên thực tế hiện có 3 chợ mua bán xe máy cũ nổi tiếng là: Chợ Tốt online, Chợ Phùng Hưng, Chợ Dịch
+                    Vọng. Cả
+                    3 chợ xe này hàng ngày có hàng trăm cuộc giao dịch mua bán xe máy diễn ra. Tuy nhiên, để đánh giá
+                    được chợ
+                    xe máy cũ Hà Nội nào uy tín thì rất khó bởi mỗi chợ lại có những ưu, nhược điểm riêng bởi vì tại đây
+                    có hàng
+                    trăm gian hàng chứ không phải 1, 2 gian mà có thể đánh giá cụ thể
+                </p>
+                <img src="picture/tintuc/tintuc1.webp" alt="">
+
+
+                <p style="width: 700px;">Ví dụ như tại chợ xe máy cũ Dịch Vọng, rất nhiều người tới đây đánh giá những
+                    cửa
+                    hàng
+                    nhỏ, lẻ thường bán
+                    đắt, mua rẻ, đôi khi còn "dìm hàng" chiếc xe được giao dịch. Nhưng không thể phủ nhận có một số cửa
+                    hàng
+                    uy
+                    tín, có thương hiệu đề cao khách hàng, mua bán đúng giá, thủ tục nhanh chóng. Một trong những địa
+                    chỉ đó
+                    là
+                    Siêu thị xe máy Hải Nam.
+                    <br>
+                    <br>
+                    Siêu thị xe máy Hải Nam được thành lập từ năm 2006, với kinh nghiệm hơn 20 năm trong nghề, là
+                    doanh
+                    nghiệp chuyên kinh doanh mua và bán tất cả các loại xe máy mới và cũ thuộc tất cả các biển số của
+                    các
+                    tỉnh
+                    thành trong cả nước.
+                    <br>
+                    <br>
+                    Đặc biệt, tại Hải Nam, trình độ chuyên môn chuyên nghiệp trong việc thẩm định chất lượng xe cũng như
+                    hồ
+                    sơ, đăng ký, giấy tờ rất chính xác. Bên cạnh đó, phong cách phục vụ chuyên nghiệp, nhiệt tình và tận
+                    tâm
+                    với
+                    khách hàng, siêu thị xe máy Hải Nam đã trở thành địa chỉ quen thuộc không chỉ trên thị trường Hà
+                    Nội
+                    mà
+                    còn phục vụ rất nhiều khách hàng - đại lý trên toàn quốc.
+                </p>
+                <img src="picture/tintuc/tintuc.webp" alt="">
+                <p>
+                    Nếu quan tâm bạn hãy đến Siêu thị xe máy Hải Nam địa chỉ:
+                    <br><br>
+
+                    Trụ sở chính: Số 52 Phố Chùa Hà - Cầu Giấy - Hà Nội
+                    <br><br>
+                    Cơ sở 1: Số 62 Phố Chùa Hà - Cầu Giấy - Hà Nội
+                    <br><br>
+                    Cơ sở 2: Số 64 - Phố Chùa Hà - Cầu Giấy - Hà Nội
+                    <br><br>
+                    Điện thoại: 0976555223
+                    <br><br>
+                    Hotline: 0976555223 - 0915254360 - 0941927219
+                    <br><br>
+                    E-mail: xemayhainam@gmail.com
+                    <br><br>
+                    Website: http://xemayhainam.com
+                </p>
+            </div>
+        </main>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="picture/hainam.png" alt="Hai Nam">
+        </div>
+
+        <div class="footer-left">
+            <h3>SIÊU THỊ XE MÁY HẢI NAM</h3>
+            <p><strong>Trụ sở chính: </strong> Số 7 Thiền Quang, Hai Bà Trưng, Hà Nội</p>
+            <p><strong>Hotline:</strong> <span class="hotline">1900 3636</span></p>
+            <p><strong>Điện thoại:</strong> 0936189036</p>
+            <p><strong>Email:</strong> xemayhainam36@gmail.com</p>
+            <p><strong>Website:</strong> <a href="#">xemayhainam.com</a></p>
+            <p>Cung cấp bởi <a href="#">Nhóm 7</a></p>
+        </div>
+
+        <div class="footer-right">
+            <div class="payment-icons">
+                <img src="picture/visa.png" alt="Visa">
+                <img src="picture/mastercard.png" alt="Mastercard">
+                <img src="picture/paypal.png" alt="PayPal">
+            </div>
+            <h4>THANH TOÁN CHUYỂN KHOẢN</h4>
+            <p><strong>Số tài khoản:</strong> 86368636</p>
+            <p><strong>Chủ tài khoản:</strong> TRAN HAI NAM</p>
+            <p><strong>Ngân hàng:</strong> Thương Mại Cổ Phần Á Châu (ACB)</p>
+            <p><strong>Chi nhánh:</strong> 3 Đ. Cầu Giấy, Ngọc Khánh, Đống Đa, Hà Nội</p>
+        </div>
+    </div>
+
+    <div class="footer-brands">
+        <img src="picture/honda.png" alt="Honda">
+        <img src="picture/yamaha.png" alt="Yamaha">
+        <img src="picture/sym.jpg" alt="SYM">
+        <img src="picture/piaggio.png" alt="Piaggio">
+        <img src="picture/suzuki.png" alt="Suzuki">
+    </div>
+</footer>
+<script src="home.js"></script>
+
+
+</html>

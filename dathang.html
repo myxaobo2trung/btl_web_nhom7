@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Hàng</title>
+    <link rel="stylesheet" href="home-web.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="dathang.css">
+</head>
+
+<body>
+    <header>
+        <div class="first">
+            <span class="hotline0">Hotline:</span> 09123456789 - 0982386712
+            <div class="info">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="gioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="tintuc.html">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="lienhe.html">Liên Hệ</a>
+                        </li>
+                        <li class="sign">
+                            <a href="">Tài Khoản</a>
+                            <ul>
+                                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                                <li><a href="dangky.html">Đăng ký</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="second">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="picture/hainam.png" alt="">
+                </a>
+
+            </div>
+            <div class="thumnail">Tự hào mang giá trị sử dụng đến với khách hàng</div>
+            <div class="search">
+                <label for="tim"><img src="picture/search-pic.jpg" alt="" class="icon-search"></label>
+                <input type="search" name="tim kiem" id="tim">
+                <br>
+                <img src="picture/email-pic.png" alt="" class="icon-mail"> abc@gmail.com
+                <br>
+                <img src="picture/location-pic.jpg" alt="" class="icon-address">
+                1 Xuân Thủy - Cầu Giấy - Hà Nội
+            </div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="xethethao.html">xe thể thao</a>
+                    </li>
+                    <li>
+                        <a href="xehonda.html">honda</a>
+                    </li>
+                    <li>
+                        <a href="xepiaggio.html">piaggio</a>
+                    </li>
+                    <li>
+                        <a href="xeyamaha.html">yamaha</a>
+                    </li>
+                    <li>
+                        <a href="xesym.html">sym</a>
+                    </li>
+                    <li>
+                        <a href="xesuzuki.html">suzuki</a>
+                    </li>
+                    <li>
+                        <a href="xethethao.html">xe giá rẻ</a>
+                    </li>
+                    <li>
+                        <a href="xe50cc.html">xe 50cc</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <script> //đoạn này để khi đăng nhập thành công sẽ hiển thị tên người dùng ở đầu trang, và nhấn đăng xuất sẽ thoát ra
+            let username = localStorage.getItem("username");
+            if (username) {
+                let taiKhoan = document.querySelector(".sign");
+                taiKhoan.innerHTML = `
+      <a href="#">${username}</a>
+      <ul>
+        <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+      </ul> `;
+                let nutDangXuat = document.getElementById("logoutBtn");
+                nutDangXuat.addEventListener("click", function () {
+                    localStorage.removeItem("username");
+                    location.reload();
+                });
+            }
+        </script>
+    </header>
+
+    <main>
+        <div>
+            <h3 style="font-size: 20px;">Thông tin người nhận:</h3>
+            <div class="thongtin-nguoinhan">
+                <input type="text" name="name" id="name" placeholder="Nhập tên người nhận">
+                <input type="text" name="phone" id="phone" placeholder="Nhập số điện thoại nhận hàng (tùy chọn)">
+                <input type="text" name="diachi" id="diachi" placeholder="Nhập địa chỉ nhận hàng (tùy chọn)">
+                <input type="text" name="note" id="note" placeholder="Ghi chú (tùy chọn)">
+
+            </div>
+        </div>
+
+        <div>
+            <div class="thongtin-donhang">
+                <h3>Tổng cộng:</h3>
+                <h4 id="gia" style="font-size: 20px;">Giá: </h4>
+            </div>
+            <div class="vanchuyen">
+                <h3>Vui lòng chọn phương thức vận chuyển:</h3>
+                <input type="radio" name="vanchuyen" id="nhanh" value="Nhanh">
+                <label for="nhanh">Nhanh</label>
+                <br>
+                <input type="radio" name="vanchuyen" id="hoatoc" value="Hỏa Tốc">
+                <label for="hoatoc">Hỏa Tốc</label>
+            </div>
+            <div class="thanhtoan">
+                <h3>Thanh toán</h3>
+                <label for="thanhtoan">Thanh toán khi nhận hàng (COD)</label>
+                <input type="radio" name="thanhtoan" id="thanhtoan">
+            </div>
+            <button id="dathang">Đặt Hàng</button>
+        </div>
+
+
+    </main>
+    </form>
+    <script src="dathang.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="picture/hainam.png" alt="Hai Nam">
+        </div>
+
+        <div class="footer-left">
+            <h3>SIÊU THỊ XE MÁY HẢI NAM</h3>
+            <p><strong>Trụ sở chính: </strong> Số 7 Thiền Quang, Hai Bà Trưng, Hà Nội</p>
+            <p><strong>Hotline:</strong> <span class="hotline">1900 3636</span></p>
+            <p><strong>Điện thoại:</strong> 0936189036</p>
+            <p><strong>Email:</strong> xemayhainam36@gmail.com</p>
+            <p><strong>Website:</strong> <a href="#">xemayhainam.com</a></p>
+            <p>Cung cấp bởi <a href="#">Nhóm 7</a></p>
+        </div>
+
+        <div class="footer-right">
+            <div class="payment-icons">
+                <img src="picture/visa.png" alt="Visa">
+                <img src="picture/mastercard.png" alt="Mastercard">
+                <img src="picture/paypal.png" alt="PayPal">
+            </div>
+            <h4>THANH TOÁN CHUYỂN KHOẢN</h4>
+            <p><strong>Số tài khoản:</strong> 86368636</p>
+            <p><strong>Chủ tài khoản:</strong> TRAN HAI NAM</p>
+            <p><strong>Ngân hàng:</strong> Thương Mại Cổ Phần Á Châu (ACB)</p>
+            <p><strong>Chi nhánh:</strong> 3 Đ. Cầu Giấy, Ngọc Khánh, Đống Đa, Hà Nội</p>
+        </div>
+    </div>
+
+    <div class="footer-brands">
+        <img src="picture/honda.png" alt="Honda">
+        <img src="picture/yamaha.png" alt="Yamaha">
+        <img src="picture/sym.jpg" alt="SYM">
+        <img src="picture/piaggio.png" alt="Piaggio">
+        <img src="picture/suzuki.png" alt="Suzuki">
+    </div>
+</footer>
+
+
+</html>

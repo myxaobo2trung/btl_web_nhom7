@@ -1,0 +1,260 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xe thể thao</title>
+    <link rel="stylesheet" href="home-web.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="first">
+            <span class="hotline0">Hotline:</span> 09123456789 - 0982386712
+            <div class="info">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="gioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="tintuc.html">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="lienhe.html">Liên Hệ</a>
+                        </li>
+                        <li class="sign">
+                            <a href="">Tài Khoản</a>
+                            <ul>
+                                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                                <li><a href="dangky.html">Đăng ký</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="second">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="picture/hainam.png" alt="">
+                </a>
+
+            </div>
+            <div class="thumnail">Tự hào mang giá trị sử dụng đến với khách hàng</div>
+            <div class="search">
+                <label for="tim"><img src="picture/search-pic.jpg" alt="" class="icon-search"></label>
+                <input type="search" name="tim kiem" id="tim">
+                <br>
+                <img src="picture/email-pic.png" alt="" class="icon-mail"> xemayhainam@gmail.com
+                <br>
+                <img src="picture/location-pic.jpg" alt="" class="icon-address">
+                1 Xuân Thủy - Cầu Giấy - Hà Nội
+            </div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="xethethao.html">xe thể thao</a>
+                    </li>
+                    <li>
+                        <a href="xehonda.html">honda</a>
+                    </li>
+                    <li>
+                        <a href="xepiaggio.html">piaggio</a>
+                    </li>
+                    <li>
+                        <a href="xeyamaha.html">yamaha</a>
+                    </li>
+                    <li>
+                        <a href="xesym.html">sym</a>
+                    </li>
+                    <li>
+                        <a href="xesuzuki.html">suzuki</a>
+                    </li>
+                    <li>
+                        <a href="xethethao.html">xe giá rẻ</a>
+                    </li>
+                    <li>
+                        <a href="xe50cc.html">xe 50cc</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+        <script> //đoạn này để khi đăng nhập thành công sẽ hiển thị tên người dùng ở đầu trang, và nhấn đăng xuất sẽ thoát ra
+            let username = localStorage.getItem("username");
+            if (username) {
+                let taiKhoan = document.querySelector(".sign");
+                taiKhoan.innerHTML = `
+      <a href="#">${username}</a>
+      <ul>
+        <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+      </ul> `;
+                let nutDangXuat = document.getElementById("logoutBtn");
+                nutDangXuat.addEventListener("click", function () {
+                    localStorage.removeItem("username");
+                    location.reload();
+                });
+            }
+        </script>
+    </header>
+    <main>
+        <h2>Xe thể thao</h2>
+        <div class="xe-list">
+            <div class="xe-item">
+                <div class="container">
+                    <img src="picture/thethao/xethethao1.webp" alt="sh">
+                    <div class="overlay">
+                        <a href="#">Năm đăng kí:2020</a>
+                        <a href="#">Dung tích:125cc</a>
+                        <a href="#">Màu sắc:Trắng</a>
+                    </div>
+                </div>
+                <h3>SH 29K1-12345</h3>
+                <p class="price">70.000.000đ</p>
+                <button>Đặt mua</button>
+            </div>
+
+            <div class="xe-item">
+                <div class="container">
+                    <img src="picture/thethao/xethethao2.jpg" alt="ab">
+                    <div class="overlay">
+                        <a href="#">Năm đăng kí:2016</a>
+                        <a href="#">Dung tích:125cc</a>
+                        <a href="#">Màu sắc:Đen</a>
+                    </div>
+                </div>
+                <h3>Air Blade 30K1-99999</h3>
+                <p class="price">40.000.000đ</p>
+                <button>Đặt mua</button>
+            </div>
+
+            <div class="xe-item">
+                <div class="container">
+                    <img src="picture/thethao/xethethao3.webp" alt="lead">
+                    <div class="overlay">
+                        <a href="#">Năm đăng kí:2019</a>
+                        <a href="#">Dung tích:125cc</a>
+                        <a href="#">Màu sắc:Đen</a>
+                    </div>
+                </div>
+                <h3>PG - 1 35K1-88888</h3>
+                <p class="price">32.000.000đ</p>
+                <button>Đặt mua</button>
+            </div>
+
+            <div class="xe-item">
+                <div class="container">
+                    <img src="picture/thethao/xethethao4.webp" alt="vario">
+                    <div class="overlay">
+                        <a href="#">Năm đăng kí:2021</a>
+                        <a href="#">Dung tích:160cc</a>
+                        <a href="#">Màu sắc:Trắng</a>
+                    </div>
+                </div>
+                <h3>VARIO 18K1-18181</h3>
+                <p class="price">41.490.000đ</p>
+                <button>Đặt mua</button>
+            </div>
+
+            <div class="xe-item">
+                <div class="container">
+                    <img src="picture/thethao/xethethao5.webp" alt="lead">
+                    <div class="overlay">
+                        <a href="#">Năm đăng kí:2022</a>
+                        <a href="#">Dung tích:125cc</a>
+                        <a href="#">Màu sắc:Đen</a>
+                    </div>
+                </div>
+                <h3>Exciter 36K1-68686</h3>
+                <p class="price">31.500.000đ</p>
+                <button>Đặt mua</button>
+            </div>
+        </div>
+    </main>
+    <div id="xePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Thông tin chi tiết xe</h3>
+            <table>
+                <tr>
+                    <th>Thuộc tính</th>
+                    <th>Giá trị</th>
+                </tr>
+                <tr>
+                    <td>Năm đăng ký</td>
+                    <td id="popup-nam"></td>
+                </tr>
+                <tr>
+                    <td>Dung tích</td>
+                    <td id="popup-dungtich"></td>
+                </tr>
+                <tr>
+                    <td>Màu sắc</td>
+                    <td id="popup-mau"></td>
+                </tr>
+                <tr>
+                    <td>Giá</td>
+                    <td id="popup-gia"></td>
+                </tr>
+            </table>
+            <button id="muaBtn">Mua ngay</button>
+            <script>
+                document.getElementById("muaBtn").addEventListener("click", function () {
+                    window.location.href = "dathang.html";
+                });
+            </script>
+        </div>
+    </div>
+    <script src="body.js"></script>
+    <script src="getGia.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="picture/hainam.png" alt="Hai Nam">
+        </div>
+
+        <div class="footer-left">
+            <h3>SIÊU THỊ XE MÁY HẢI NAM</h3>
+            <p><strong>Trụ sở chính: </strong> Số 7 Thiền Quang, Hai Bà Trưng, Hà Nội</p>
+            <p><strong>Hotline:</strong> <span class="hotline">1900 3636</span></p>
+            <p><strong>Điện thoại:</strong> 0936189036</p>
+            <p><strong>Email:</strong> xemayhainam36@gmail.com</p>
+            <p><strong>Website:</strong> <a href="#">xemayhainam.com</a></p>
+            <p>Cung cấp bởi <a href="#">Nhóm 7</a></p>
+        </div>
+
+        <div class="footer-right">
+            <div class="payment-icons">
+                <img src="picture/visa.png" alt="Visa">
+                <img src="picture/mastercard.png" alt="Mastercard">
+                <img src="picture/paypal.png" alt="PayPal">
+            </div>
+            <h4>THANH TOÁN CHUYỂN KHOẢN</h4>
+            <p><strong>Số tài khoản:</strong> 86368636</p>
+            <p><strong>Chủ tài khoản:</strong> TRAN HAI NAM</p>
+            <p><strong>Ngân hàng:</strong> Thương Mại Cổ Phần Á Châu (ACB)</p>
+            <p><strong>Chi nhánh:</strong> 3 Đ. Cầu Giấy, Ngọc Khánh, Đống Đa, Hà Nội</p>
+        </div>
+    </div>
+
+    <div class="footer-brands">
+        <img src="picture/honda.png" alt="Honda">
+        <img src="picture/yamaha.png" alt="Yamaha">
+        <img src="picture/sym.jpg" alt="SYM">
+        <img src="picture/piaggio.png" alt="Piaggio">
+        <img src="picture/suzuki.png" alt="Suzuki">
+    </div>
+</footer>
+
+
+</html>
