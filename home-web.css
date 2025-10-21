@@ -63,7 +63,7 @@ body {
     font-weight: bold;
     position: relative;
     padding-top: 40px;
-    left: 160px;
+    left: 180px;
     color: rgb(42, 42, 78);
     padding-bottom: 50px;
 
@@ -91,7 +91,7 @@ body {
 
 .search {
     position: relative;
-    left: 200px;
+    left: 250px;
     display: block;
     font-size: 20px;
 }
