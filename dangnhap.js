@@ -9,5 +9,6 @@ document.getElementById("submit").addEventListener("click", function (f) {
     alert("Gửi thành công!");
     document.querySelector("form").reset();
     localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
     window.location.href = "index.html";
 });
