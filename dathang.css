@@ -4,10 +4,9 @@ main {
     background: #fff;
     padding: 20px 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
-    gap: 300px;
-    justify-content: center;
+    gap: 40%;
 }
 
 .thongtin-nguoinhan input {
@@ -18,11 +17,12 @@ main {
     border-radius: 8px;
 
 }
-
+.thongtin-nguoinhan {
+    margin-left: 25%;
+}
 .thongtin-nguoinhan input:last-child {
     height: 100px;
 }
-
 
 button {
     margin-top: 10px;
