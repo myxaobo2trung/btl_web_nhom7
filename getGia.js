@@ -3,14 +3,15 @@ document.querySelectorAll(".xe-item button").forEach(button => {
         const xeItem = this.closest(".xe-item");
         const gia = xeItem.querySelector(".price").innerText.trim();
         localStorage.setItem("giaXeDaChon", gia);
+        const ten = xeItem.querySelector(".ten").innerText.trim();
+        localStorage.setItem("tenDaChon", ten)
 
         const popup = document.getElementById("xePopup");
         const popupGia = document.getElementById("popup-gia");
         const muaNgayBtn = document.getElementById("muaBtn");
         const closeBtn = document.querySelector(".popup .close");
 
-
-        if (popup && popupGia) {
+        if (popup && popupGia && popupTen) {
             popupGia.innerText = gia;
             popup.style.display = "block";
         }
