@@ -17,12 +17,15 @@ main {
     border-radius: 8px;
 
 }
+
 .thongtin-nguoinhan {
     margin-left: 25%;
 }
+
 .thongtin-nguoinhan input:last-child {
     height: 100px;
 }
+
 
 button {
     margin-top: 10px;
